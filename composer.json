@@ -1,0 +1,27 @@
+{
+    "name": "szemul/debugger",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0.0",
+        "jetbrains/phpstorm-attributes": "^1.0",
+        "mockery/mockery": "^1.0",
+        "phpstan/extension-installer": "^1.1.0",
+        "phpstan/phpstan": "^0.12.80",
+        "phpunit/phpunit": "^9.5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Szemul\\Debugger\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Szemul\\Debugger\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
