@@ -74,8 +74,10 @@ class DebuggerRegistryTest extends TestCase
         return Mockery::mock(DebugEventInterface::class);
     }
 
-    private function expectEventHandled(MockInterface $debugger, DebugEventInterface $event): void
-    {
+    private function expectEventHandled(
+        DebuggerInterface|MockInterface|LegacyMockInterface $debugger,
+        DebugEventInterface $event,
+    ): void {
         // @phpstan-ignore-next-line
         $debugger->shouldReceive('handleEvent')
             ->with($event);
