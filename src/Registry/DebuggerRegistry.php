@@ -10,7 +10,7 @@ use Szemul\Debugger\Event\DebugEventInterface;
 class DebuggerRegistry implements DebuggerInterface
 {
     /** @var DebuggerInterface[] */
-    private array $debuggers;
+    private array $debuggers = [];
 
     public function addDebugger(DebuggerInterface $debugger): void
     {
