@@ -52,10 +52,10 @@ class HttpResponseReceivedEvent implements DebugEventInterface
         return $this->response?->getStatusCode() ?? self::NO_STATUS_CODE;
     }
 
-    /** @return array[] */
+    /** @return array<string,array<int,string>> */
     public function getHeaders(): array
     {
-        return ($this->response?->getHeaders()) ?? [];
+        return $this->response?->getHeaders() ?? [];
     }
 
     public function getBody(): string
@@ -65,7 +65,7 @@ class HttpResponseReceivedEvent implements DebugEventInterface
 
     public function getBodyLength(): int
     {
-        return ($this->response?->getBody()?->getSize()) ?? 0;
+        return $this->response?->getBody()?->getSize() ?? 0;
     }
 
     public function getRuntime(): float
